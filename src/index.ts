@@ -10,13 +10,13 @@ const fs = require('fs');
 
 require('dotenv').config();
 
-// const key = fs.readFileSync(String(__dirname + '/keys/selfsigned.key'));
-// const cert = fs.readFileSync(String(__dirname + '//keys/selfsigned.crt'));
+const key = fs.readFileSync(String(__dirname + '/keys/selfsigned.key'));
+const cert = fs.readFileSync(String(__dirname + '//keys/selfsigned.crt'));
 
-// const options = {
-//   key: key,
-//   cert: cert,
-// };
+const options = {
+  key: key,
+  cert: cert,
+};
 
 const app = express();
 /**
@@ -29,11 +29,11 @@ app.get('/', (req, res) => {
   res.json({ started: true });
 });
 
-// const server_s = https.createServer(options, app);
+const server_s = https.createServer(options, app);
 
-// server_s.listen(Number(process.env.PORT_S), String(process.env.HOST), () => {
-//  logger.imp(`HTTPS Server started on ${process.env.PORT_S}`);
-//});
+server_s.listen(Number(process.env.PORT_S), String(process.env.HOST), () => {
+  logger.imp(`HTTPS Server started on ${process.env.PORT_S}`);
+});
 const port = process.env.PORT || 80;
 const host = String(process.env.HOST) || '0.0.0.0';
 
@@ -43,7 +43,7 @@ server.listen(port, host, () => {
 });
 
 try {
-  //  initializeSocket(server_s);
+  initializeSocket(server_s);
   initializeSocket(server);
 } catch (error) {
   console.log('soc err:', error);
