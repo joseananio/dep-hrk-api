@@ -1,6 +1,6 @@
-import { User } from '@auth0/auth0-react';
+//import { User } from '@auth0/auth0-react';
 
-export const getUserIdentifier = (user: User) => {
+export const getUserIdentifier = (user) => {
   return user.sub || user.email || getRandomIdentifier();
 };
 

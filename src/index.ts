@@ -10,13 +10,13 @@ const fs = require('fs');
 
 require('dotenv').config();
 
-const key = fs.readFileSync(String(__dirname + '/keys/selfsigned.key'));
-const cert = fs.readFileSync(String(__dirname + '//keys/selfsigned.crt'));
+// const key = fs.readFileSync(String(__dirname + '/keys/selfsigned.key'));
+// const cert = fs.readFileSync(String(__dirname + '//keys/selfsigned.crt'));
 
-const options = {
-  key: key,
-  cert: cert,
-};
+// const options = {
+//   key: key,
+//   cert: cert,
+// };
 
 const app = express();
 /**
@@ -24,6 +24,10 @@ const app = express();
  */
 app.use(morgan('tiny'));
 app.use(cors());
+
+app.get('/', (req, res) => {
+  res.json({ started: true });
+});
 
 // const server_s = https.createServer(options, app);
 
@@ -33,7 +37,7 @@ app.use(cors());
 const port = process.env.PORT || 80;
 const host = String(process.env.HOST) || '0.0.0.0';
 
-const server = http.createServer(options, app);
+const server = http.createServer({}, app);
 server.listen(port, host, () => {
   logger.info(`HTTP Server started on ${port}`);
 });
