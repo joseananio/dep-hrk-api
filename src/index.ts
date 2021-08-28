@@ -25,19 +25,21 @@ const app = express();
 app.use(morgan('tiny'));
 app.use(cors());
 
-const server_s = https.createServer(options, app);
+// const server_s = https.createServer(options, app);
+
+// server_s.listen(Number(process.env.PORT_S), String(process.env.HOST), () => {
+//  logger.imp(`HTTPS Server started on ${process.env.PORT_S}`);
+//});
+const port = process.env.PORT || 80;
+const host = String(process.env.HOST);
+
 const server = http.createServer(options, app);
-
-server_s.listen(Number(process.env.PORT_S), String(process.env.HOST), () => {
-  logger.imp(`HTTPS Server started on ${process.env.PORT_S}`);
-});
-
-server.listen(Number(process.env.PORT), String(process.env.HOST), () => {
-  logger.info(`HTTP Server started on ${process.env.PORT}`);
+server.listen(port, host, () => {
+  logger.info(`HTTP Server started on ${port}`);
 });
 
 try {
-  initializeSocket(server_s);
+  //  initializeSocket(server_s);
   initializeSocket(server);
 } catch (error) {
   console.log('soc err:', error);
