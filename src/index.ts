@@ -31,7 +31,7 @@ app.use(cors());
 //  logger.imp(`HTTPS Server started on ${process.env.PORT_S}`);
 //});
 const port = process.env.PORT || 80;
-const host = String(process.env.HOST);
+const host = String(process.env.HOST) || '0.0.0.0';
 
 const server = http.createServer(options, app);
 server.listen(port, host, () => {
