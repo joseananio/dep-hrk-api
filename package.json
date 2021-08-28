@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node .",
-    "build": "tsc",
+    "build": "tsc && cp -r src/keys dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
