@@ -11,7 +11,7 @@ const fs = require('fs');
 require('dotenv').config();
 
 const key = fs.readFileSync(String(__dirname + '/keys/selfsigned.key'));
-const cert = fs.readFileSync(String(__dirname + '//keys/selfsigned.crt'));
+const cert = fs.readFileSync(String(__dirname + '/keys/selfsigned.crt'));
 
 const options = {
   key: key,
