@@ -1,0 +1,16 @@
+meta:
+  name: monster
+  spec: model
+
+global:
+  region: us-east-1
+
+nodes:
+  - identifier: node1
+    compute:
+      cpu: 12
+      ram: 12
+  - identifier: node2
+    compute:
+      ram: 111
+      cpu: 333
