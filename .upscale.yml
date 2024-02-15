@@ -5,8 +5,11 @@ meta:
 global:
   region: us-east-1
 
+clusters:
+  - identifier: cluster-c11
 nodes:
   - identifier: node1
+    cluster: cluster-c11
     compute:
       cpu: 12
       ram: 12
