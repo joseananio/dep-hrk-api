@@ -7,7 +7,7 @@ nodes:
   - identifier: node1
     cluster: cluster-c11
     compute:
-      cpu: 12
+      cpu: 120
       ram: 12
   - identifier: node2
     compute:
