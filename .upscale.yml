@@ -2,9 +2,6 @@ meta:
   identifier: monster12
   spec: model
 
-global:
-  region: us-east-1
-
 clusters:
   - identifier: cluster-c11
 nodes:
