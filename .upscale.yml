@@ -1,6 +1,5 @@
 meta:
   identifier: monster12o
-  spec: model
 
 clusters:
   - identifier: cluster-c11
