@@ -4,6 +4,7 @@ meta:
 clusters:
   - identifier: cluster-c11
     clusterType: region
+    nodesCound: 3
 nodes:
   - identifier: node1
     cluster: cluster-c11
