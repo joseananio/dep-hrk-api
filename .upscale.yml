@@ -3,6 +3,7 @@ meta:
 
 clusters:
   - identifier: cluster-c11
+    clusterType: region
 nodes:
   - identifier: node1
     cluster: cluster-c11
