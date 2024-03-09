@@ -6,10 +6,12 @@ clusters:
 nodes:
   - identifier: node1
     cluster: cluster-c11
+    retion: us-east-1
     compute:
       cpu: 120
       ram: 12
   - identifier: node2
+    retion: us-east-1
     compute:
       ram: 111
       cpu: 333
