@@ -8,10 +8,10 @@ nodes:
     cluster: cluster-c11
     region: us-east-1
     compute:
-      cpu: 120
-      ram: 12
+      cpu: 120Ghz
+      ram: 12Mb
   - identifier: node2
     region: us-east-1
     compute:
-      ram: 111
-      cpu: 333
+      ram: 111GHz
+      cpu: 333Gb
