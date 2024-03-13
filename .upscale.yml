@@ -1,5 +1,5 @@
 meta:
-  identifier: monster-trucks
+  identifier: global-net
 
 clusters:
   - identifier: cluster-c11
