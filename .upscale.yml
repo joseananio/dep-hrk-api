@@ -1,6 +1,5 @@
 meta:
   identifier: monster-truck
-  truck: monster
 
 clusters:
   - identifier: cluster-c11
